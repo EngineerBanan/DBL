@@ -109,22 +109,17 @@ div {
         font-size: 30px;
     }
 }
-chara-cutin .cardoverlay .switchpush {
-    position: absolute;
-    line-height: 0;
-    bottom: 25%;
-    right: 2%;
-    width: 12%;
-    max-width: 50px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: contain;
-    font-size: 0;
-}
 #toggleImage {
     transition: transform 0.2s;
 }
 footer{
     text-align: center;
     color: white;
+}
+.rarity.sparking {
+    bottom: 5%;
+    left: 2%;
+    width: 30%;
+    max-width: 250px;
+    background-image: url(images/rarete_sparking.webp);
 }
