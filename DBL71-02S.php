@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image" href="images/icone_dbl.png">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Goku et Vegeta SSGSS Transfo</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <div style="position: relative; display: inline-block;"> <!--position des images-->
+            <img src="images/arriere_plan_personnage.webp" alt="Image d'arrière plan" style="position: absolute; width:100%; height: 256px; line-height: 0; background-repeat: no-repeat;
+            overflow: hidden; border-radius: 15px; background-position: center;">
+            <img src="images/banniere_goku.webp" alt="Bannière Goku" style="position: relative;">
+            <script>
+            function changement_tag()
+            {
+                document.getElementById('toggleImage').href="images/banniere_vegeta.webp";
+                document.getElementById('toggleImage').id="toggledImage";
+                document.getElementById('goku').id="vegeta";
+            }
+            function changement_tag2()
+            {
+                document.getElementById('toggledImage').href="images/banniere_goku.webp";
+                document.getElementById('toggledImage').id="toggleImage";
+                document.getElementById('vegeta').id="goku";
+            }
+            </script>
+        </div>
+    </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Stats</h2>
+        <div class="element-container">
+            <div class="element-container">
+            <img class="background" src="images/titre_ultra.webp"/>
+            <span class="element-text">Jauge de synchro</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_or.webp"/>
+            <span class="element-text">Mise à couvert<br>particulière (physique)</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_or.webp"/>
+            <span class="element-text">Annule les mises à<br> couvert particulières</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_or.webp"/>
+            <span class="element-text">Jauge unique</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_or.webp"/>
+            <span class="element-text">Substitution</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Arts physiques dotés<br> d'une armure</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_bronze.webp"/>
+            <span class="element-text">Passeur de relais</span>
+            </div>
+        </div>
+        <h2 class="ligne-blanche">Vignette perso.</h2>
+        <div class="element-container">
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Saiyan</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Famille Goku</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Ki Divin</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Super Saiyan divin SS</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Lignée royale Vegeta</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Guerrier fusionné</span>
+            </div>
+            <div class="element-container">
+            <img class="background" src="images/titre_argent.webp"/>
+            <span class="element-text">Fusion</span>
+            </div>
+    </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Capacité de substitution</h2>
+        <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
+        <div id="goku" class="panneau">
+            <p>
+            Cède la place à « Vegeta » via une substitution.
+            <br>
+            Si vous avez 3 cartes ou moins, tire 1 carte au hasard.
+            <br>
+            Regénère le ki de 50.
+            <br>
+            Regénère 50% de la jauge de téléportation (se déclenche 2 fois).
+            <br>
+            Octroie un bonus d'état annulant les actions spéciales qui s'activent
+            <br>
+            lors d'une mise à couvert de l'adversaire pendant 5 secondes (se déclenche 2 fois).
+            <br>
+            Annule les malus de stats.
+            <br>
+            <br>
+            Conditions d'utilisation : jauge de substitution pleine.
+            </p>
+        </div>
+        <script>
+        if ($("div").attr("id") == "goku"){
+            document.getElementById('goku').innerHTML= '<div id="goku" class="panneau">'+
+            '<p>'+
+            'Cède la place à « Vegeta » via une substitution.'+
+            '<br>'+
+            'Si vous avez 3 cartes ou moins, tire 1 carte au hasard.'+
+            '<br>'+
+            'Regénère le ki de 50.'+
+            '<br>'+
+            'Regénère 50% de la jauge de téléportation (se déclenche 2 fois).'+
+            '<br>'+
+            'Octroie un bonus d\'état annulant les actions spéciales qui s\'activent'+
+            '<br>'+
+            'lors d\'une mise à couvert de l\'adversaire pendant 5 secondes (se déclenche 2 fois).'+
+            '<br>'+
+            'Annule les malus de stats.'+
+            '<br>'+
+            '<br>'+
+            'Conditions d\'utilisation : jauge de substitution pleine.'+
+            '</p>';
+        }
+        else if ($("div").attr("id") == "vegeta"){
+            document.getElementById("vegeta").innerHTML= '<div id="vegeta" class="panneau">'+
+            '<p>'+
+            'Cède la place à « Goku » via une substitution.'+
+            '<br>'+
+            'Si vous avez 3 cartes ou moins, tire 1 carte au hasard.'+
+            '<br>'+
+            'Regénère le ki de 50.'+
+            '<br>'+
+            'Regénère 50% de la jauge de téléportation (se déclenche 2 fois).'+
+            '<br>'+
+            'Octroie un bonus d\'état annulant les actions spéciales qui s\'activent'+
+            '<br>'+
+            'lors d\'une mise à couvert de l\'adversaire pendant 5 secondes (se déclenche 2 fois).'+
+            '<br>'+
+            'Annule les malus de stats.'+
+            '<br>'+
+            '<br>'+
+            'Conditions d\'utilisation : jauge de substitution pleine.'+
+            '</p>';
+        }
+        </script>
+    </div>
+    <div class="cartes">
+        <h3 class="ligne-blanche">Capacités LIMITED Z</h3>
+        <button class="accordeon">Capacité LIMITED Z I</button>
+        <div class="panneau">
+        <p>Lorsque vous faites partie des combattants de l'équipe, augmente comme suit les stats des alliés : </p>
+        
+        - Augmente de 3% l'attaque physique de base.
+        <br>
+        - Augmente de 3% l'attaque d'énergie de base.
+        <br>
+        - Augmente de 3% la défense physique de base.
+        <br>
+        - Augmente de 3% la défense d'énergie de base.
+        </p>
+        </div>
+        <br>
+        <button class="accordeon">Capacité LIMITED Z II</button>
+        <div class="panneau">
+        <p>Lorsque vous faites partie des combattants de l'équipe, augmente comme suit les stats des alliés : </p>
+        
+        - Augmente de 5% l'attaque physique de base.
+        <br>
+        - Augmente de 5% l'attaque d'énergie de base.
+        <br>
+        - Augmente de 5% la défense physique de base.
+        <br>
+        - Augmente de 5% la défense d'énergie de base.
+        </p>
+        </div>
+        <br>
+        <button class="accordeon">Capacité LIMITED Z III</button>
+        <div class="panneau">
+        <p>Lorsque vous faites partie des combattants de l'équipe, augmente comme suit les stats des alliés : </p>
+        
+        - Augmente de 7% l'attaque physique de base.
+        <br>
+        - Augmente de 7% l'attaque d'énergie de base.
+        <br>
+        - Augmente de 7% la défense physique de base.
+        <br>
+        - Augmente de 7% la défense d'énergie de base.
+        </p>
+        </div>
+        <br>
+        <button class="accordeon">Capacité LIMITED Z IV</button>
+        <div class="panneau">
+        <p>Lorsque vous faites partie des combattants de l'équipe, augmente comme suit les stats des alliés : </p>
+        
+        - Augmente de 10% l'attaque physique de base.
+        <br>
+        - Augmente de 10% l'attaque d'énergie de base.
+        <br>
+        - Augmente de 10% la défense physique de base.
+        <br>
+        - Augmente de 10% la défense d'énergie de base.
+        </p>
+        </div>
+    </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Capacités Z</h2>
+        <button class="accordeon">Capacité Z I</button>
+        <div class="panneau">
+        <p>Lors d'un combat, augmente de 22% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
+        et des « Épisode : Saga des films ».</p>
+        </div>
+        <br/>
+        <button class="accordeon">Capacité Z II</button>
+        <div class="panneau">
+        <p>Lors d'un combat, augmente de 26% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
+        et des « Épisode : Saga des films ».</p>
+        </div>
+        <br/>
+        <button class="accordeon">Capacité Z III</button>
+        <div class="panneau">
+        <p>Lors d'un combat, augmente de 30% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
+        et des « Épisode : Saga des films » et de 15% la défense d'énergie de base des « Classe : Ki divin ».</p>
+        </div>
+        <br/>
+        <button class="accordeon">Capacité Z IV</button>
+        <div class="panneau">
+        <p>Lors d'un combat, augmente de 38% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
+        et des « Épisode : Saga des films », de 18% la défense d'énergie de base des « Classe : Ki divin » et de 10% la force max de base des « Classe : Ki divin ».</p>
+        </div>
+    </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Cap. unique</h2>
+        <button class="accordeon">Guerriers prenant part à un grand combat</button>
+        <div class="panneau">
+            <p>Les effets suivants s'activent au début du combat : 
+            </p>
+            <p>- Augmente de 100% les dégâts infligés (annulation impossible).
+            <br>
+            - Augmente de 40% les dégâts physiques infligés (annulation impossible).
+            <br>
+            - Réduit de 70% les dégâts subis (annulation impossible).
+            <br>
+            - Augmente de 1 rang la vitesse de pioche de cartes d'arts (annulation impossible).</p>
+            <br>
+            <p>Une fois entré en scène, les effets suivants s'activent :
+            </p>
+            <p>- Tire une carte d'art unique au tour suivant (se déclenche 1 fois).
+            <br>
+            - Regénère le ki de 30.
+            <br>
+            - Augmente de 70% les dégâts infligés (annulation impossible) (se déclenche 1 fois).
+            <br>
+            - Détruit aléatoirement 2 cartes d'art d'énergie de l'adversaire. </p>
+            <br>
+            <p>Lorsque vous êtes sur le terrain, si la force restante est inférieure ou égale à 50% 
+            <br>
+            lorsque vous subissez une attaque d'art, les effets suivants s'activent (se déclenche 1 fois) :
+            </p>
+            <p>- Annule le désavantage lié à l'affinité d'attribut des dégâts subis pendant 15 secondes.
+            <br>
+            - Réduit de 10 secondes la durée de mise en attente des alliés.
+            <br>
+            - Soigne les altérations d'état et les malus de stats des alliés.
+            <br>
+            - Réduit de 70 le ki de l'adversaire.</p>
+            <p>*Le nombre de déclenchements est partagé par Son Goku et Vegeta.</p>
+            <br>
+            <p>Lorsque vous utilisez un art, réduit de 15% les dégâts de type Choc pendant 5 secondes.</p>
+        </div>
+        <br>
+        <button class="accordeon">Combinaison pour surmonter l'adversité</button>
+        <div class="panneau">
+            <p>Votre jauge de synchro augmente légèrement à chaque fois que vous utilisez votre capacité de substitution.
+            <br>
+            En appuyant sur la jauge de synchro une fois celle-ci remplie au maximum, vous fusionnez en « Gogeta » avec 100% de force.</p>
+            <br>
+            <p>En cas de mise à couvert effectuée contre une attaque d'art physique, expulse l'ennemi à une distance éloignée (compatible avec rempart).</p>
+            <p>[Arts avec lesquels il est possible d'enchaîner]
+            <br>
+            - Arts spéciaux</p>
+            <p>Lorsque vous êtes sur le terrain, votre jauge unique augmente à chaque fois que vous utilisez une carte d'art physique, d'énergie ou spécial.
+            <br>
+            Lorsque la jauge unique est remplie, les effets suivants s'activent :
+            </p>
+            <p>- Si vous avez 3 cartes ou moins, tire 1 carte au hasard.
+            <br>
+            - Regénère le ki de 30.
+            <br>
+            - Augmente la jauge de synchro de 25% (se déclenche 1 fois).</p>
+            <br>
+            <p>Lorsque la jauge unique est remplie et que vous utilisez un art physique, d'énergie ou spécial, la jauge unique se consomme entièrement et les effets suivants s'activent :
+            </p>
+            <p>- Augmente de 50% les dégâts infligés pendant 2 secondes.
+            <br>
+            - Augmente de 1 votre nombre de Dragon Balls (se déclenche 1 fois).</p>
+            <br>
+            <p>Si la force est inférieure ou égale à 50% lorsque vous vous repliez, les effets suivants s'activent :
+            </p>
+            <p>- Regénère votre force de 30% (se déclenche 1 fois).
+            <br>
+            *Le nombre de déclenchements est partagé par Son Goku et Vegeta.
+            <br>
+            - Augmente votre jauge de synchro de 50% (se déclenche 1 fois).
+            <br>
+            *Le nombre de déclenchements est partagé par Son Goku et Vegeta.
+            <br>
+            - Augmente de 20% les dégâts infligés par les alliés pendant 20 secondes.
+            <br>
+            - Fait perdre 1 Dragon Ball à l'adversaire (se déclenche 1 fois).
+            </p>
+        </div>
+    </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Épisodes</h2>
+        <p style="font-weight: bold; color: white;">Saga des films</p>
+    </div>
+    <script>
+var acc = document.getElementsByClassName("accordeon");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+<footer>
+  <p style="color: white; font-weight: bold;">©Propriété de LEGRAND Gatien</p>
+</footer>
+
+
+</body>
+</html>

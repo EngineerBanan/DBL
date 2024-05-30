@@ -1,0 +1,126 @@
+body{
+    background-color: rgb(41, 40, 40);
+}
+.gras{
+    font-weight: bold;
+}
+.ligne-blanche {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+p{
+    color: black;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 130%; 
+    text-align: left; 
+    font-size: 16px;
+}
+.cartes{
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 65%;
+    font-weight: bold;
+}
+
+.accordeon {
+    background-color: #C8C6B7;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    font-weight: bold;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+  
+.accordeon:after {
+    content: '\2B9F';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2B9D";
+}
+  
+.panneau {
+    padding: 0 18px;
+    background-color: #B4B2A3;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.element-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.background {
+    width: 100%;
+    height: auto;
+}
+.element-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 0%;
+    margin-bottom: 0%;
+}
+.chara-cutin .cardoverlay .cardNUM {
+    position: absolute;
+    line-height: 0;
+    top: 10%;
+    right: 2%;
+    flex-wrap: wrap;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
+    color: white;
+}
+@media (min-width: 901px) {
+    .chara-cutin .cardoverlay .cardNUM {
+        font-size: 30px;
+    }
+}
+chara-cutin .cardoverlay .switchpush {
+    position: absolute;
+    line-height: 0;
+    bottom: 25%;
+    right: 2%;
+    width: 12%;
+    max-width: 50px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+}
+#toggleImage {
+    transition: transform 0.2s;
+}
