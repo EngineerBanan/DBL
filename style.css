@@ -124,3 +124,7 @@ chara-cutin .cardoverlay .switchpush {
 #toggleImage {
     transition: transform 0.2s;
 }
+footer{
+    text-align: center;
+    color: white;
+}
