@@ -116,10 +116,17 @@ footer{
     text-align: center;
     color: white;
 }
-.rarity.sparking {
-    bottom: 5%;
-    left: 2%;
-    width: 30%;
-    max-width: 250px;
-    background-image: url(images/rarete_sparking.webp);
+.character-thumb > .lfname {
+    font-family: DBLegends;
+    width: 162px;
+    transform: translate(28px, 133.49px);
+}
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+.bottom{
+    position: absolute;
+    bottom: 8px;
 }

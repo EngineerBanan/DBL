@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image" href="images/icone_dbl.png">
     <link rel="stylesheet" href="style.css"> 
-    <title>Goku et Vegeta SSGSS Transfo</title>
+    <title id="titre">Goku et Vegeta SSGSS</title>
 </head>
 <body>
     <div style="text-align: center;">
@@ -19,14 +19,15 @@
             <div style="position: absolute; color: white; top: 10px; right: 10px; z-index: 1; font-family: Montserrat, sans-serif; font-weight: bold; font-size: 130%;">
             <span>DBL71-02S</span>
             </div>
-            <div class="rarity sparking">
+            <div>
+                <img style="position: relative; bottom: 50px; left: 20px; width: 20%; max-width: 100px;" src="images/rarete_sparking.webp" alt="Rareté SPARKING">
             </div>
             <div style="position: absolute; top: 115px; right: 25px; z-index: 1;">
             <img id="transfo" src="images/fusion_off.webp" onclick="changement_perso()" alt="Transform Icon" width="100%" height="100%">
             <br>
             <img id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image" onclick="changement_tag()" width="49">
             </div>
-            <div style="position: absolute; bottom: 10px; right: 10px;">
+            <div style="position: absolute; top: 40px; right: 5px;">
             <img src="images/type_jaune.png" alt="Attribut">
             <br>
             </div>
@@ -53,6 +54,7 @@
                 document.getElementById('banniere').href="images/banniere_gogeta";
                 document.getElementById('vegeta').id="gogeta";
                 document.getElementById('goku').id="gogeta";
+                document.getElementById('titre').title="Gogeta SSGSS";
             }
             </script>
         </div>
