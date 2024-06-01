@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image" href="images/icone_dbl.png">
     <link rel="stylesheet" href="style.css"> 
-    <title id="titre">Goku et Vegeta SSGSS</title>
+    <title id="titre">Goku & Vegeta SSGSS</title>
 </head>
 <body>
     <div style="text-align: center;">
@@ -20,10 +20,14 @@
             <span>DBL71-02S</span>
             </div>
             <div>
+                <img src="images/lfbanner.webp" style="position: absolute; line-height: 0; left: 0; width: 85%; top:54%; 
+                max-width: 650px; max-height: 30px; background-color: transparent; background-repeat: no-repeat; background-size: contain; font-size: 0;" alt="Bannière LF">
+            </div>
+            <div>
                 <img style="position: relative; bottom: 60px; right: 400px; width: 20%;" src="images/rarete_sparking.webp" alt="Rareté SPARKING">
             </div>
             <div style="position: absolute; top: 115px; right: 25px; z-index: 1;">
-            <img id="transfo" src="images/fusion_off.webp" onclick="changement_perso()" alt="Transform Icon" width="100%" height="100%">
+            <button style="background-color:transparent; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);" onclick="changement_perso()" id="bouton"><img style="cursor: pointer;" id="transfo" src="images/fusion_off.webp" alt="Transform Icon" width="100%" height="100%"></button>
             <br>
             <img id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image" onclick="changement_tag()" width="49">
             </div>
@@ -45,16 +49,27 @@
                 document.getElementById('baniere').href="images/banniere_goku.webp";
                 document.getElementById('toggledImage').id="toggleImage";
                 document.getElementById('vegeta').id="goku";
+                document.getElementById('toggledImage').onclick="changement_tag()";
             }
             function changement_perso()
-            {   
-                document.getElementById('toggleImage').id="changedImage";
-                document.getElementById('toggledImage').id="changedImage";
-                document.getElementById('transfo').src="images/fusion_on.webp";
-                document.getElementById('banniere').href="images/banniere_gogeta";
-                document.getElementById('vegeta').id="gogeta";
-                document.getElementById('goku').id="gogeta";
-                document.getElementById('titre').title="Gogeta SSGSS";
+            { 
+                var image = document.getElementById('transfo').src;
+                if (image == 'images/fusion_off.webp')
+            {
+                document.getElementById('toggleImage').id = 'changedImage';
+                document.getElementById('transfo').src = 'images/fusion_on.webp';
+                document.getElementById('banniere').href = 'images/banniere_gogeta';
+                document.getElementById('goku').id = 'gogeta';
+                document.getElementById('titre').title = 'Gogeta SSGSS';
+            }
+                else if (image == 'images/fusion_on.webp')
+                {
+                    document.getElementById('transfo').src = 'images/fusion_off.webp';
+                    document.getElementById('banniere').href = 'images/banniere_goku';
+                    document.getElementById('gogeta').id = 'goku';
+                    document.getElementById('titre').title = 'Goku & Vegeta SSGSS';
+                    document.getElementById('changedImage').id = 'toggleImage';
+                }
             }
             </script>
         </div>
@@ -129,7 +144,7 @@
     <div class="cartes">
         <h2 class="ligne-blanche">Capacité de substitution</h2>
         <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
-        <div id="goku" class="panneau">
+        <div class="panneau cap_sub" id="goku">
             <p>
             Cède la place à « Vegeta » via une substitution.
             <br>
@@ -144,14 +159,15 @@
             lors d'une mise à couvert de l'adversaire pendant 5 secondes (se déclenche 2 fois).
             <br>
             Annule les malus de stats.
+            </p>
             <br>
-            <br>
-            Conditions d'utilisation : jauge de substitution pleine.
+            <p>
+            Condition d'utilisation : jauge de substitution pleine.
             </p>
         </div>
         <script>
         if ($("div").attr("id") == "goku"){
-            document.getElementById('goku').innerHTML= '<div id="goku" class="panneau">'+
+            document.getElementsByClassName('cap_sub').innerHTML=
             '<p>'+
             'Cède la place à « Vegeta » via une substitution.'+
             '<br>'+
@@ -168,11 +184,11 @@
             'Annule les malus de stats.'+
             '<br>'+
             '<br>'+
-            'Conditions d\'utilisation : jauge de substitution pleine.'+
+            'Condition d\'utilisation : jauge de substitution pleine.'+
             '</p>';
         }
         else if ($("div").attr("id") == "vegeta"){
-            document.getElementById("vegeta").innerHTML= '<div id="vegeta" class="panneau">'+
+            document.getElementsByClassName("cap_sub").innerHTML= '<div id="vegeta" class="panneau">'+
             '<p>'+
             'Cède la place à « Goku » via une substitution.'+
             '<br>'+
@@ -189,10 +205,29 @@
             'Annule les malus de stats.'+
             '<br>'+
             '<br>'+
-            'Conditions d\'utilisation : jauge de substitution pleine.'+
+            'Condition d\'utilisation : jauge de substitution pleine.'+
             '</p>';
         }
+        else if ($("div").attr("id") == "gogeta"){
+            document.getElementsByClassName("cap_sub").innerHTML= '<div id="gogeta" class="panneau">'+
+                '<p>'+
+                'Tire une carte d\'art spécial au tour suivant.'+
+                '<br>'+
+                'Regénère la force de 20% et le ki de 50.'+
+                '<br>'+
+                'Augmente la jauge unique de 100%.'+
+                '<br>'+
+                'Regénère 100% de la jauge de téléportation.'+
+                '<br>'+
+                'Détruit l\'ensemble des cartes de l\'adversaire.'+
+                '</p>'+
+                '<br>'+
+                '<p>'+
+                'Condition d\'utilisation : après 15 secondes.'+
+                '</p>';
+        }
         </script>
+    </div>
     </div>
     <div class="cartes">
         <h3 class="ligne-blanche">Capacités LIMITED Z</h3>
