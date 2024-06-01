@@ -117,9 +117,13 @@ footer{
     color: white;
 }
 .character-thumb > .lfname {
-    font-family: DBLegends;
-    width: 162px;
+    font-family: DBLegends; 
     transform: translate(28px, 133.49px);
+    position: absolute;   
+    left: 20px;
+    text-shadow: 0px 0px 2px #ffffff; 
+    font-size: 10px; 
+    color: #1a1b1f;
 }
 .bottom-left {
     position: absolute;
@@ -129,4 +133,16 @@ footer{
 .bottom{
     position: absolute;
     bottom: 8px;
+}
+.top{
+    position: absolute;
+    top: 8px;
+}
+.character-thumb > .lfbanner {
+    position: absolute;
+    width: 162px;
+    height: 32px;
+    background-size: 162px 32px;
+    transform: translate(25px, 125px);
+    background-image: url(images/LL_plate.webp);
 }
