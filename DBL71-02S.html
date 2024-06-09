@@ -11,7 +11,7 @@
         <div style="position: relative; display: inline-block;"> <!--position des images-->
             <img src="images/arriere_plan_personnage.webp" alt="Image d'arrière plan" style="position: absolute; width:100%; height: 256px; line-height: 0; background-repeat: no-repeat;
             overflow: hidden; border-radius: 15px; background-position: center;">
-            <img id="banniere" src="images/banniere_goku.webp" alt="Bannière Goku" style="position: relative;">
+            <img id="banniere-goku" src="images/banniere_goku.webp" alt="Bannière" style="position: relative;">
             <div style="position: absolute; color: white; top: 10px; left: 10px; z-index: 1; font-family: Montserrat, sans-serif; font-weight: bold; font-size: 130%;">
             <span>Super Saiyan Divin SS Goku & Vegeta</span>
             <br>
@@ -27,9 +27,9 @@
                 <img style="position: relative; bottom: 60px; right: 400px; width: 20%;" src="images/rarete_sparking.webp" alt="Rareté SPARKING">
             </div>
             <div style="position: absolute; top: 115px; right: 25px; z-index: 1;">
-            <button style="background-color:transparent; box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);" onclick="changement_perso()" id="bouton"><img style="cursor: pointer;" id="transfo" src="images/fusion_off.webp" alt="Transform Icon" width="100%" height="100%"></button>
+            <button class="image" onclick="changement_perso()" id="transfo"><img class="image" style="cursor: pointer;" src="images/fusion_off.webp" alt="Transform Icon"></button>
             <br>
-            <img id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image" onclick="changement_tag()" width="49">
+            <button class="image" id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image" onclick="changement_tag()"><img class="image" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"></button>
             </div>
             <div style="position: absolute; top: 40px; right: 5px;">
             <img src="images/type_jaune.png" alt="Attribut">
@@ -39,17 +39,20 @@
             <script>
             function changement_tag()
             {
-                document.getElementById('banniere').href="images/banniere_vegeta.webp";
-                document.getElementById('toggleImage').id="toggledImage";
-                document.getElementById('goku').id="vegeta";
-                document.getElementById('toggledImage').onclick="changement_tag2()";
-            }
-            function changement_tag2()
+                if (document.getElementById('banniere-goku').src='images/banniere_goku.webp')
             {
-                document.getElementById('baniere').href="images/banniere_goku.webp";
-                document.getElementById('toggledImage').id="toggleImage";
+                document.getElementById('banniere-goku').id='banniere-vegeta';
+                document.getElementById('banniere-vegeta').href='images/banniere_vegeta.webp';
+                document.getElementById('goku').id='vegeta';
+                document.getElementById('toggleImage').src='images/changement_tag_active.webp';
+            }
+                else if (document.getElementById('banniere-vegeta').src='images/banniere_vegeta.webp')
+            {
+                document.getElementById('banniere-vegeta').id='banniere-goku';
+                document.getElementById('baniere-goku').href="images/banniere_goku.webp";
                 document.getElementById('vegeta').id="goku";
-                document.getElementById('toggledImage').onclick="changement_tag()";
+                document.getElementById('toggleImage').src='images/changement_tag.webp';
+            }
             }
             function changement_perso()
             { 
@@ -144,30 +147,11 @@
     <div class="cartes">
         <h2 class="ligne-blanche">Capacité de substitution</h2>
         <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
-        <div class="panneau cap_sub" id="goku">
-            <p>
-            Cède la place à « Vegeta » via une substitution.
-            <br>
-            Si vous avez 3 cartes ou moins, tire 1 carte au hasard.
-            <br>
-            Regénère le ki de 50.
-            <br>
-            Regénère 50% de la jauge de téléportation (se déclenche 2 fois).
-            <br>
-            Octroie un bonus d'état annulant les actions spéciales qui s'activent
-            <br>
-            lors d'une mise à couvert de l'adversaire pendant 5 secondes (se déclenche 2 fois).
-            <br>
-            Annule les malus de stats.
-            </p>
-            <br>
-            <p>
-            Condition d'utilisation : jauge de substitution pleine.
-            </p>
-        </div>
+        <div class="panneau cap_sub">
         <script>
-        if ($("div").attr("id") == "goku"){
+        if ($("img").attr("id") == "banniere-goku"){
             document.getElementsByClassName('cap_sub').innerHTML=
+            '<div id="goku">'+
             '<p>'+
             'Cède la place à « Vegeta » via une substitution.'+
             '<br>'+
@@ -187,8 +171,9 @@
             'Condition d\'utilisation : jauge de substitution pleine.'+
             '</p>';
         }
-        else if ($("div").attr("id") == "vegeta"){
-            document.getElementsByClassName("cap_sub").innerHTML= '<div id="vegeta" class="panneau">'+
+        else if ($("img").attr("id") == "banniere-vegeta"){
+            document.getElementsByClassName('cap_sub').innerHTML= 
+            '<div id="vegeta">'+
             '<p>'+
             'Cède la place à « Goku » via une substitution.'+
             '<br>'+
