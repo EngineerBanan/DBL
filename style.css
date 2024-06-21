@@ -165,3 +165,7 @@ footer{
     font-weight: light;
     src: url(fonts/AdvocateAncientSans-Light.ttf);
 }
+.white{
+    color: #f5efef;
+    font-weight: lighter;
+}

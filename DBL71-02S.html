@@ -148,6 +148,24 @@
         <h2 class="ligne-blanche">Capacité de substitution</h2>
         <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
         <div class="panneau cap_sub">
+            <p>
+            Cède la place à « Vegeta » via une substitution.
+            <br>
+            Si vous avez 3 cartes ou moins, tire 1 carte au hasard.
+            <br>
+            Regénère le ki de 50.
+            <br>
+            Regénère 50% de la jauge de téléportation (se déclenche 2 fois).
+            <br>
+            Octroie un bonus d'état annulant les actions spéciales qui s'activent
+            <br>
+            lors d'une mise à couvert de l'adversaire pendant 5 secondes (se déclenche 2 fois).
+            <br>
+            Annule les malus de stats.
+            <br>
+            <br>
+            Condition d'utilisation : jauge de substitution pleine.
+            </p>
         <script>
         if ($("img").attr("id") == "banniere-goku"){
             document.getElementsByClassName('cap_sub').innerHTML=
@@ -213,7 +231,8 @@
         }
         </script>
     </div>
-    <div class="cartes">
+    </div>
+        <div class="cartes">
         <h3 class="ligne-blanche">Capacités LIMITED Z</h3>
         <button class="accordeon">Capacité LIMITED Z I</button>
         <div class="panneau">
@@ -379,6 +398,23 @@
             </p>
         </div>
     </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Cartes d'arts</h2>
+            <img style="width: 100px;" src="images/strike.webp" alt="carte de type mêlée">
+            <p class="white" style="font-weight: bold; position: relative;">
+            Physique (Régénération de force)
+            </p>
+            <p class="white" style="position: relative;">
+            Carte physique octroyant Régénération de force de 5% lorsqu'elle est utilisée.
+            </p>
+            <img style="width: 100px;" src="images/blast.webp" alt="carte de type distance">
+            <p class="white" style="font-weight: bold;">
+            Attaque d'énergie (Régénération du ki)
+            </p>
+            <p class="white">
+            Carte d'énergie octroyant Régénération du ki de 5 lorsqu'elle est utilisée.
+            </p>
+    </div>
     <script>
 var acc = document.getElementsByClassName("accordeon");
 var i;
@@ -395,8 +431,6 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
-
-<footer>©Propriété de LEGRAND Gatien</footer>
 
 
 </body>
