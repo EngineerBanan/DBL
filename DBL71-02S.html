@@ -30,20 +30,7 @@
             <button class="image" id="transfo"><img class="image" id="fusion_off" style="cursor: pointer;" src="images/fusion_off.webp" alt="Transform Icon"></button>
             <br>
             <button class="image" id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image"><img class="image" id="personnage" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"/></button>
-            <script>
-                const myImg = document.getElementById("personnage");
-                const myButton = document.getElementById("toggleImage");
-
-                let isFirstImage = true;
-
-                myButton.addEventListener("click", function() {
-                    if (isFirstImage) {
-                        personnage.src = "images/banniere_vegeta.webp";
-                    } else {
-                        personnage.src = "images/banniere_goku.webp";
-                    }
-                        isFirstImage = !isFirstImage;
-            });
+            <script src="scripts.js">
             </script>
             </div>
             <div style="position: absolute; top: 40px; right: 5px;">
