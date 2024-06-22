@@ -27,54 +27,29 @@
                 <img style="position: relative; bottom: 60px; right: 400px; width: 20%;" src="images/rarete_sparking.webp" alt="Rareté SPARKING">
             </div>
             <div style="position: absolute; top: 115px; right: 25px; z-index: 1;">
-            <button class="image" onclick="changement_perso()" id="transfo"><img class="image" style="cursor: pointer;" src="images/fusion_off.webp" alt="Transform Icon"></button>
+            <button class="image" id="transfo"><img class="image" id="fusion_off" style="cursor: pointer;" src="images/fusion_off.webp" alt="Transform Icon"></button>
             <br>
-            <button class="image" id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image" onclick="changement_tag()"><img class="image" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"></button>
+            <button class="image" id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image"><img class="image" id="personnage" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"/></button>
+            <script>
+                const myImg = document.getElementById("personnage");
+                const myButton = document.getElementById("toggleImage");
+
+                let isFirstImage = true;
+
+                myButton.addEventListener("click", function() {
+                    if (isFirstImage) {
+                        personnage.src = "images/banniere_vegeta.webp";
+                    } else {
+                        personnage.src = "images/banniere_goku.webp";
+                    }
+                        isFirstImage = !isFirstImage;
+            });
+            </script>
             </div>
             <div style="position: absolute; top: 40px; right: 5px;">
             <img src="images/type_jaune.png" alt="Attribut">
             <br>
             </div>
-
-            <script>
-            function changement_tag()
-            {
-                if (document.getElementById('banniere-goku').src='images/banniere_goku.webp')
-            {
-                document.getElementById('banniere-goku').id='banniere-vegeta';
-                document.getElementById('banniere-vegeta').href='images/banniere_vegeta.webp';
-                document.getElementById('goku').id='vegeta';
-                document.getElementById('toggleImage').src='images/changement_tag_active.webp';
-            }
-                else if (document.getElementById('banniere-vegeta').src='images/banniere_vegeta.webp')
-            {
-                document.getElementById('banniere-vegeta').id='banniere-goku';
-                document.getElementById('baniere-goku').href="images/banniere_goku.webp";
-                document.getElementById('vegeta').id="goku";
-                document.getElementById('toggleImage').src='images/changement_tag.webp';
-            }
-            }
-            function changement_perso()
-            { 
-                var image = document.getElementById('transfo').src;
-                if (image == 'images/fusion_off.webp')
-            {
-                document.getElementById('toggleImage').id = 'changedImage';
-                document.getElementById('transfo').src = 'images/fusion_on.webp';
-                document.getElementById('banniere').href = 'images/banniere_gogeta';
-                document.getElementById('goku').id = 'gogeta';
-                document.getElementById('titre').title = 'Gogeta SSGSS';
-            }
-                else if (image == 'images/fusion_on.webp')
-                {
-                    document.getElementById('transfo').src = 'images/fusion_off.webp';
-                    document.getElementById('banniere').href = 'images/banniere_goku';
-                    document.getElementById('gogeta').id = 'goku';
-                    document.getElementById('titre').title = 'Goku & Vegeta SSGSS';
-                    document.getElementById('changedImage').id = 'toggleImage';
-                }
-            }
-            </script>
         </div>
     </div>
     <div class="cartes">
