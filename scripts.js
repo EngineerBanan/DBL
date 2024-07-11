@@ -5,9 +5,9 @@ let isFirstImage = true;
 
 myButton.addEventListener("click", function() {
   if (isFirstImage) {
-    personnage.src = "images/banniere_vegeta.webp";
+    banniere.src = "images/banniere_vegeta.webp";
   } else {
-    personnage.src = "images/banniere_goku.webp";
+    banniere.src = "images/banniere_goku.webp";
   }
   isFirstImage = !isFirstImage;
 });
