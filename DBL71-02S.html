@@ -29,7 +29,7 @@
             <div style="position: absolute; top: 115px; right: 25px; z-index: 1;">
             <button class="image" id="transfo"><img class="image" id="fusion" style="cursor: pointer;" src="images/fusion_off.webp" alt="Transform Icon"></button>
             <br>
-            <button class="image" id="toggleImage" src="images/changement_tag.webp" alt="Toggle Image"><img class="image" id="personnage" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"/></button>
+            <button class="image" id="toggleImage" alt="Toggle Image"><img class="image" id="personnage" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"/></button>
             <script src="scripts.js">
             </script>
             </div>
@@ -106,100 +106,12 @@
             <span class="element-text">Fusion</span>
             </div>
     </div>
-    <div class="cartes">
-        <h2 class="ligne-blanche">Capacité de substitution</h2>
-        <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
-        <div class="panneau cap_sub">
-            <p>
-            Cède la place à « Vegeta » via une substitution.
-            <br>
-            Si vous avez 3 cartes ou moins, tire 1 carte au hasard.
-            <br>
-            Regénère le ki de 50.
-            <br>
-            Regénère 50% de la jauge de téléportation (se déclenche 2 fois).
-            <br>
-            Octroie un bonus d'état annulant les actions spéciales qui s'activent
-            <br>
-            lors d'une mise à couvert de l'adversaire pendant 5 secondes (se déclenche 2 fois).
-            <br>
-            Annule les malus de stats.
-            <br>
-            <br>
-            Condition d'utilisation : jauge de substitution pleine.
-            </p>
-        <script>
-        if ($("img").attr("src") == "images/banniere_goku.webp"){
-            document.getElementsByClassName('cap_sub').innerHTML=
-            '<div id="goku">'+
-            '<p>'+
-            'Cède la place à « Vegeta » via une substitution.'+
-            '<br>'+
-            'Si vous avez 3 cartes ou moins, tire 1 carte au hasard.'+
-            '<br>'+
-            'Regénère le ki de 50.'+
-            '<br>'+
-            'Regénère 50% de la jauge de téléportation (se déclenche 2 fois).'+
-            '<br>'+
-            'Octroie un bonus d\'état annulant les actions spéciales qui s\'activent'+
-            '<br>'+
-            'lors d\'une mise à couvert de l\'adversaire pendant 5 secondes (se déclenche 2 fois).'+
-            '<br>'+
-            'Annule les malus de stats.'+
-            '<br>'+
-            '<br>'+
-            'Condition d\'utilisation : jauge de substitution pleine.'+
-            '</p>';
-        }
-        else if ($("img").attr("src") == "images/banniere_vegeta.webp"){
-            document.getElementsByClassName('cap_sub').innerHTML=
-            '<div id="vegeta">'+
-            '<p>'+
-            'Cède la place à « Goku » via une substitution.'+
-            '<br>'+
-            'Si vous avez 3 cartes ou moins, tire 1 carte au hasard.'+
-            '<br>'+
-            'Regénère le ki de 50.'+
-            '<br>'+
-            'Regénère 50% de la jauge de téléportation (se déclenche 2 fois).'+
-            '<br>'+
-            'Octroie un bonus d\'état annulant les actions spéciales qui s\'activent'+
-            '<br>'+
-            'lors d\'une mise à couvert de l\'adversaire pendant 5 secondes (se déclenche 2 fois).'+
-            '<br>'+
-            'Annule les malus de stats.'+
-            '<br>'+
-            '<br>'+
-            'Condition d\'utilisation : jauge de substitution pleine.'+
-            '</p>';
-        }
-        else if ($("div").attr("id") == "gogeta"){
-            document.getElementsByClassName("cap_sub").innerHTML= '<div id="gogeta" class="panneau">'+
-                '<p>'+
-                'Tire une carte d\'art spécial au tour suivant.'+
-                '<br>'+
-                'Regénère la force de 20% et le ki de 50.'+
-                '<br>'+
-                'Augmente la jauge unique de 100%.'+
-                '<br>'+
-                'Regénère 100% de la jauge de téléportation.'+
-                '<br>'+
-                'Détruit l\'ensemble des cartes de l\'adversaire.'+
-                '</p>'+
-                '<br>'+
-                '<p>'+
-                'Condition d\'utilisation : après 15 secondes.'+
-                '</p>';
-        }
-        </script>
-    </div>
-    </div>
         <div class="cartes">
         <h3 class="ligne-blanche">Capacités LIMITED Z</h3>
         <button class="accordeon">Capacité LIMITED Z I</button>
         <div class="panneau">
         <p>Lorsque vous faites partie des combattants de l'équipe, augmente comme suit les stats des alliés : </p>
-        
+
         - Augmente de 3% l'attaque physique de base.
         <br>
         - Augmente de 3% l'attaque d'énergie de base.
@@ -213,7 +125,7 @@
         <button class="accordeon">Capacité LIMITED Z II</button>
         <div class="panneau">
         <p>Lorsque vous faites partie des combattants de l'équipe, augmente comme suit les stats des alliés : </p>
-        
+
         - Augmente de 5% l'attaque physique de base.
         <br>
         - Augmente de 5% l'attaque d'énergie de base.
@@ -275,6 +187,30 @@
         <p>Lors d'un combat, augmente de 38% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
         et des « Épisode : Saga des films », de 18% la défense d'énergie de base des « Classe : Ki divin » et de 10% la force max de base des « Classe : Ki divin ».</p>
         </div>
+    </div>
+    <div class="cartes">
+        <h2 class="ligne-blanche">Capacité de substitution</h2>
+        <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
+        <div class="panneau cap_sub">
+            <p>
+            Cède la place à « Vegeta » via une substitution.
+            <br>
+            Si vous avez 3 cartes ou moins, tire 1 carte au hasard.
+            <br>
+            Regénère le ki de 50.
+            <br>
+            Regénère 50% de la jauge de téléportation (se déclenche 2 fois).
+            <br>
+            Octroie un bonus d'état annulant les actions spéciales qui s'activent
+            <br>
+            lors d'une mise à couvert de l'adversaire pendant 5 secondes (se déclenche 2 fois).
+            <br>
+            Annule les malus de stats.
+            <br>
+            <br>
+            Condition d'utilisation : jauge de substitution pleine.
+            </p>
+    </div>
     </div>
     <div class="cartes">
         <h2 class="ligne-blanche">Cap. unique</h2>
