@@ -2,14 +2,37 @@ const myImg = document.getElementById("personnage");
 const myButton = document.getElementById("toggleImage");
 
 let isFirstImage = true;
+let isGogeta = false;
 
 myButton.addEventListener("click", function() {
   if (isFirstImage) {
     banniere.src = "images/banniere_vegeta.webp";
+    personnage.src = "images/changement_tag_active.webp";
+    fusion.src = "images/fusion_off.webp";
   } else {
     banniere.src = "images/banniere_goku.webp";
+    personnage.src = "images/changement_tag.webp";
+    fusion.src = "images/fusion_off.webp";
   }
   isFirstImage = !isFirstImage;
+});
+
+const myImg2 = document.getElementById("fusion");
+const myButton2 = document.getElementById("transfo");
+
+let isSameImage = false;
+
+myButton2.addEventListener("click", function() {
+  if (isSameImage) {
+    banniere.src = "images/banniere_goku.webp";
+    fusion.src = "images/fusion_off.webp";
+  } else {
+    banniere.src = "images/banniere_gogeta.webp";
+    fusion.src = "images/fusion_on.webp";
+    personnage.src = "images/changement_tag.webp";
+
+  }
+  isSameImage = !isSameImage;
 });
 
 myButton.addEventListener("click", function() {
@@ -73,16 +96,3 @@ myButton.addEventListener("click", function() {
   }
 });
 
-const myImg2 = document.getElementById("fusion");
-const myButton2 = document.getElementById("transfo");
-
-let isGogeta = false;
-
-myButton2.addEventListener("click", function() {
-  if (isGogeta) {
-    banniere.src = "images/banniere_goku.webp";
-  } else {
-    banniere.src = "images/banniere_gogeta.webp";
-  }
-  isGogeta = !isGogeta;
-});

@@ -17,8 +17,8 @@ p{
     color: black;
     margin-top: 0;
     margin-bottom: 1rem;
-    line-height: 130%; 
-    text-align: left; 
+    line-height: 130%;
+    text-align: left;
     font-size: 16px;
 }
 .cartes{
@@ -43,7 +43,7 @@ p{
     font-size: 15px;
     transition: 0.4s;
 }
-  
+
 .accordeon:after {
     content: '\2B9F';
     color: #777;
@@ -51,11 +51,11 @@ p{
     float: right;
     margin-left: 5px;
 }
-  
+
 .active:after {
     content: "\2B9D";
 }
-  
+
 .panneau {
     padding: 0 18px;
     background-color: #B4B2A3;
@@ -119,13 +119,14 @@ footer{
     color: white;
 }
 .character-thumb > .lfname {
-    font-family: DBLegends; 
+    font-family: DBLegends;
     transform: translate(28px, 133.49px);
-    position: absolute;   
+    position: absolute;
     left: 20px;
-    text-shadow: 0px 0px 2px #ffffff; 
-    font-size: 10px; 
+    text-shadow: 0px 0px 2px #ffffff;
+    font-size: 10px;
     color: #1a1b1f;
+    background-image: url(images/LL_plate.webp);
 }
 .bottom-left {
     position: absolute;
@@ -150,6 +151,9 @@ footer{
 }
 .image{
     width: 49;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 @font-face {
     font-family: Advocate;
