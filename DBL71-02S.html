@@ -29,7 +29,7 @@
             <div style="position: absolute; top: 115px; right: 25px; z-index: 1;">
             <button class="image" id="transfo"><img id="fusion" style="cursor: pointer;" src="images/fusion_off.webp" alt="Transform Icon"></button>
             <br>
-            <button class="image" id="toggleImage" alt="Toggle Image"><img id="personnage" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"/></button>
+            <button class="image" id="toggleImage"><img id="personnage" style="cursor: pointer;" src="images/changement_tag.webp" alt="Tag icon"/></button>
             <script src="scripts.js">
             </script>
             </div>
@@ -167,13 +167,13 @@
         <h2 class="ligne-blanche">Capacités Z</h2>
         <button class="accordeon">Capacité Z I</button>
         <div class="panneau">
-        <p>Lors d'un combat, augmente de 22% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
+        <p>Lors d'un combat, augmente de 22% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan »
         et des « Épisode : Saga des films ».</p>
         </div>
         <br/>
         <button class="accordeon">Capacité Z II</button>
         <div class="panneau">
-        <p>Lors d'un combat, augmente de 26% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan » 
+        <p>Lors d'un combat, augmente de 26% la défense et l'attaque physique de base des « Classe : Guerrier fusionné », des « Classe : Saiyan »
         et des « Épisode : Saga des films ».</p>
         </div>
         <br/>
@@ -192,7 +192,7 @@
     <div class="cartes">
         <h2 class="ligne-blanche">Capacité de substitution</h2>
         <button class="accordeon">Pouvoirs divins bleus en harmonie</button>
-        <div class="panneau cap_sub">
+        <div id="principal" class="panneau cap_sub">
             <p class="light">
             Cède la place à « Vegeta » via une substitution.
             <br>
@@ -300,7 +300,10 @@
     </div>
     <div class="cartes">
         <h2 class="ligne-blanche">Cartes d'arts</h2>
+        <div class="carte">
             <img style="width: 100px;" src="images/strike.webp" alt="carte de type mêlée">
+            <img src="images/HUD_CardAbility_HealthRecovery.png" style="right:40px;" alt width="35" class="art-effect-image">
+        </div>
             <p class="white" style="font-weight: bold; position: relative;">
             Physique (Régénération de force)
             </p>

@@ -142,12 +142,18 @@ footer{
     top: 8px;
 }
 .character-thumb > .lfbanner {
-    position: relative;
+    font-family: DBLegends;
     width: 162px;
-    height: 32px;
-    background-size: 162px 32px;
-    transform: translate(25px, 125px);
+    transform: translate(28px, 133.49px);
     background-image: url(images/LL_plate.webp);
+}
+.character-thumb > .carder {
+    position: relative;
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+    margin-bottom: -33px;
+    transform: translate(-2px, 0px);
 }
 .image{
     width: 49;
