@@ -124,6 +124,13 @@ footer{
     background-size: 162px 32px;
     background-image: url(/assets/icon_elements/CharaInfo_icnLimitedPlate.webp);
     transform: translate(25px, 125px);
+    -webkit-transform: translate(25px, 125px);
+    -moz-transform: translate(25px, 125px);
+    -ms-transform: translate(25px, 125px);
+    -o-transform: translate(25px, 125px);
+}
+.character-thumb > .rarete_ul {
+    background-image: url(images/rarete_ul.webp);
 }
 .bottom-left {
     position: absolute;
