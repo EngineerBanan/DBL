@@ -1,9 +1,11 @@
 body{
     background-color: rgb(41, 40, 40);
 }
+
 .gras{
     font-weight: bold;
 }
+
 .ligne-blanche {
     font-size: 1.2em;
     font-weight: bold;
@@ -13,6 +15,7 @@ body{
     padding: 10px 10px;
     border-radius: 5px;
 }
+
 p{
     color: black;
     margin-top: 0;
@@ -21,6 +24,7 @@ p{
     text-align: left;
     font-size: 16px;
 }
+
 .cartes{
     margin: 20px auto;
     padding: 10px 20px;
@@ -64,13 +68,16 @@ p{
     transition: max-height 0.2s ease-out;
     font-family: Advocate, sans-serif;
 }
+
 div {
     display: block;
     unicode-bidi: isolate;
 }
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
+
 .element-text {
     position: absolute;
     top: 50%;
@@ -87,16 +94,19 @@ div {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .background {
     width: 100%;
     height: auto;
 }
+
 .element-container {
     position: relative;
     display: inline-block;
     margin-right: 0%;
     margin-bottom: 0%;
 }
+
 .chara-cutin .cardoverlay .cardNUM {
     position: absolute;
     line-height: 0;
@@ -106,18 +116,22 @@ div {
     text-shadow: 0 0 1px black, 0 0 1px black, 0 0 1px black, 0 0 1px black;
     color: white;
 }
+
 @media (min-width: 901px) {
     .chara-cutin .cardoverlay .cardNUM {
         font-size: 30px;
     }
 }
+
 #toggleImage {
     transition: transform 0.2s;
 }
+
 footer{
     text-align: center;
     color: white;
 }
+
 .character-thumb > .lfbanner {
     width: 162px;
     height: 32px;
@@ -129,22 +143,27 @@ footer{
     -ms-transform: translate(25px, 125px);
     -o-transform: translate(25px, 125px);
 }
+
 .character-thumb > .rarete_ul {
     background-image: url(images/rarete_ul.webp);
 }
+
 .bottom-left {
     position: absolute;
     bottom: 8px;
     left: 16px;
 }
+
 .bottom{
     position: absolute;
     bottom: 8px;
 }
+
 .top{
     position: absolute;
     top: 8px;
 }
+
 .character-thumb > .carder {
     position: relative;
     width: 190px;
@@ -153,6 +172,7 @@ footer{
     margin-bottom: -33px;
     transform: translate(-2px, 0px);
 }
+
 .image{
     width: 49;
     background-color: transparent;
@@ -161,24 +181,29 @@ footer{
     background-size: contain;
     overflow: hidden;
 }
+
 @font-face {
     font-family: Advocate;
     src: url(fonts/AdvocateAncientSans-Normal.ttf);
 }
+
 @font-face {
     font-family: Advocate;
     font-weight: bold;
     src: url(fonts/AdvocateAncientSans-Bold.ttf);
 }
+
 @font-face {
     font-family: Advocate;
     font-weight: light;
     src: url(fonts/AdvocateAncientSans-Light.ttf);
 }
+
 .white{
     color: #f5efef;
     font-weight: lighter;
 }
+
 .light{
     font-family: light;
 }
