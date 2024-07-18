@@ -107,17 +107,22 @@
             <img class="background" src="images/titre_argent.webp"/>
             <span class="element-text">Fusion</span>
             </div>
-            </div>
+        </div>
     </div>
     <div class="cartes">
         <h3 class="ligne-blanche">Capacité ULTRA</h3>
         <button class="accordeon">Résonance de la puissance (Guerrier fusionné)</button>
         <div class="panneau">
-        <p>Au début du combat, si vous êtes placé en leader, les effets suivants s'activent : </p>
-
-        - Augmente de 30% vos dégâts infligés (annulation impossible).
+        <p>Au début du combat, si vous êtes placé en leader, les effets suivants s'activent :
+        </p>
+        <p class="light">- Augmente de 30% vos dégâts infligés (annulation impossible).
         <br>
         - Augmente de 30% votre vitesse de récupération du Ki (annulation impossible).
+        </p>
+        <p>Au début du combat, si vous n'êtes pas placé en leader, les effets suivants s'activent par combattant de l'équipe ou unité de soutien de « Classe : Guerrier fusionné » :</p>
+        <p class="light"> - Augmente de 5% vos dégâts infligés (annulation impossible).
+        <br>
+        - Augmente de 5% votre vitesse de récupération du Ki (annulation impossible).
         </p>
         </div>
     </div>
@@ -149,7 +154,7 @@
         <h2 class="ligne-blanche">Capacité principale</h2>
         <button class="accordeon">Je vais t'envoyer prendre ta retraite en enfer !</button>
         <div id="principal" class="panneau cap_sub">
-            <p class="light">
+            <p>
             Tire la carte d'art ultime « Big Bang Kamehameha dévastateur » au tour suivant.
             <br>
             Regénère la force de 30% et le Ki de 50.
@@ -179,12 +184,13 @@
             <br>
             - Réduit de 70% les dégâts subis (annulation impossible).
             <br>
-            - Augmente de 1 rang la vitesse de pioche de cartes d'arts (annulation impossible).</p>
+            - Augmente de 1 rang la vitesse de pioche de cartes d'arts (annulation impossible).
             <br>
             - Augmente de 40% la vitesse de récupération du Ki (annulation impossible).
             <br>
             - Réduit de 5 le coût de tous les arts (annulation impossible).
             <br>
+            </p>
             <p>Une fois entré en scène, les effets suivants s'activent :
             </p>
             <p class="light">- Si vous avez trois cartes ou moins, tire 1 carte au hasard (se déclenche 3 fois).
@@ -277,7 +283,7 @@
             <br>
             *Lorsque le contre se déclenche 3 fois, la jauge unique disparaît.</p>
             <br>
-            <p>De plus, lorsque le contre dse déclenche, les effets suivants s'activent :
+            <p>De plus, lorsque le contre se déclenche, les effets suivants s'activent :
             </p>
             <p class="light">- Si vous avez 3 cartes ou moins, tire jusqu'à 4 cartes au hasard.
             <br>
@@ -295,4 +301,22 @@
             </p>
         </div>
     </div>
+    <script>
+var acc = document.getElementsByClassName("accordeon");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
 </body>
+</html>
