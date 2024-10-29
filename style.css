@@ -56,6 +56,22 @@ p{
     margin-left: 5px;
 }
 
+#gogeta{
+    position: relative;
+}
+
+#img1{
+    position: absolute;
+}
+
+#img2{
+    width: 18%;
+}
+
+#img3{
+    width:auto;
+}
+
 .active:after {
     content: "\2B9D";
 }
